@@ -1,5 +1,8 @@
 package configuration;
 
+import lombok.Data;
+
+@Data
 public class Browser {
 
     String browserName;

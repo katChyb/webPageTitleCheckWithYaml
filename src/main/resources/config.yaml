@@ -1,4 +1,4 @@
-activeEnvironment: test
+activeEnvironment: test_env
 environments:
   test_env:
     browser:
@@ -21,3 +21,5 @@ environments:
       browserTimeout: 60
     testData:
       title: Selenium
+
+

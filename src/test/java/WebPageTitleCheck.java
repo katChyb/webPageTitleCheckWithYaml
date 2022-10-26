@@ -1,9 +1,14 @@
+import configuration.YamlReader;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Map;
+
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class WebPageTitleCheck extends BaseTest {
 
@@ -20,7 +25,9 @@ public class WebPageTitleCheck extends BaseTest {
         String actualTitle = driver.getTitle();
         log.info(">>>>>>>> My website adress id: " + pageUrl + "<<<<<<<<<");
 
-        assertThat(actualTitle).isEqualTo(expectedTitle);
+        Map test= YamlReader.getPropertiesFromYaml();
+        System.out.println(test.get("headlessMode"));
+       //assertThat(actualTitle).isEqualTo(expectedTitle);
 
     }
 }
