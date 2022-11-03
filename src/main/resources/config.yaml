@@ -1,25 +1,18 @@
-activeEnvironment: test_env
+activeEnv: test_env
+browser:
+  browserName: firefox
+  browserAttachScreenshot: false
+  headlessMode: true
+  browserTimeout: 60
 environments:
   test_env:
-    browser:
-      browserName: chrome
-      appUrl: https://www.filmweb.pl/
-      browserAttachScreenshot: false
-      headlessMode: true
-      browserTimeout: 60
-    testData:
-      title: Filmweb - filmy takie jak Ty!
+    envName: test_env
+    appUrl: https://www.filmweb.pl/
+    title: Filmweb - filmy takie jak Ty!
+  int_env:
+    envName: int_env
+    title: Selenium
+    appUrl: https://www.selenium.dev/
 
-
-
-  integration_env:
-    browser:
-      browserName: chrome
-      appUrl: https://www.selenium.dev/
-      browserAttachScreenshot: false
-      headlessMode: true
-      browserTimeout: 60
-    testData:
-      title: Selenium
 
 
